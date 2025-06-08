@@ -2,24 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ved's Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-  <div id="header">
+  <div class="ball-cursor"></div>
+
+  <!-- Header Section -->
+  <header id="header">
     <div class="container">
       <nav>
-        <img src="images\logo.png" class="">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+        <img src="images/logo.png" alt="Ved's Logo" class="logo">
+        <ul id="sideMenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closeMenu()"></i>
         </ul>
+        <i class="fas fa-bars" onclick="openMenu()"></i>
       </nav>
+
+      <div class="header-text">
+  <h3><span class="typing"></span></h3>
+  <h2>Hi, I'm <span style="color: #ff004f;">Vedprakash</span></h2>
+  <p>Crafting fast, secure web apps.</p>
+
+</div>
+
     </div>
-  </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png" alt="Ved's Profile Picture">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>A passionate developer with hands-on experience in web, app development, and UI/UX design. Currently pursuing BCA and actively honing skills in PHP, Laravel, and modern frontend technologies.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+              <li><span>Web Development</span><br>Building dynamic Web Applications</li>
+              <li><span>App Development</span><br>Android App development</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>UI/UX Design</span><br>Created user-friendly interfaces for websites and mobile apps through academic and personal projects.</li>
+              <li><span>Web Development</span><br>Developed responsive and scalable web apps using HTML, CSS, JavaScript, PHP, and Laravel.</li>
+              <li><span>App Development</span><br>Built Android applications using Java and participated in collaborative projects.</li>
+              <li><span>Version Control</span><br>Efficiently managed code using Git & GitHub.</li>
+              <li><span>Team Collaboration</span><br>Worked in college project teams and coding events.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>BCA (2022-2025)</span><br>XYZ University / College, City</li>
+              <li><span>Core Subjects</span><br>Web Development, Data Structures, DBMS, Software Engineering</li>
+              <li><span>Projects</span><br>Built multiple projects using PHP, Laravel, HTML, CSS, JS, SQL</li>
+              <li><span>Activities</span><br>Participated in coding contests and technical events</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="sub-title">My Services</h2>
+      <div class="services-list">
+        <div>
+          <i class="fas fa-code"></i>
+          <h3>UI/UX Design</h3>
+          <p>Creating clean and user-friendly interfaces for web and mobile apps.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fas fa-crop-alt"></i>
+          <h3>Web Design</h3>
+          <p>Developing visually appealing, responsive, and dynamic websites.</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div>
+          <i class="fas fa-app-store"></i>
+          <h3>App Design</h3>
+          <p>Designing intuitive mobile app experiences with seamless navigation.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="sub-title">My Work</h2>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.png" alt="Social Media App Project">
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>Interactive platform for connecting with friends and communities.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-2.png" alt="Music App Project">
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>A clean interface for streaming and organizing your favorite tracks.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-3.png" alt="Shopping App Project">
+          <div class="layer">
+            <h3>Shopping App</h3>
+            <p>Seamless eCommerce experience with secure payment integration.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h2 class="sub-title">Contact Me</h2>
+          <p><i class="fas fa-paper-plane"></i> contact@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 1234567890</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <a href="images/Vedprakash.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="copyright">
+      <center>&copy; 2025 Vedprakash. All rights reserved.</center>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
+  
+
 </body>
 </html>
