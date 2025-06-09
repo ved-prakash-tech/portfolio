@@ -22,9 +22,9 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
-          <i class="fas fa-times" onclick="closeMenu()"></i>
+          <i style="color: white;" class="fas fa-times" onclick="closeMenu()"></i>
         </ul>
-        <i class="fas fa-bars" onclick="openMenu()"></i>
+        <i style="color: white;" class="fas fa-bars" onclick="openMenu()"></i>
       </nav>
 
       <div class="header-text">
@@ -34,19 +34,25 @@
 
 </div>
 
-    </div>
+</div>
   </header>
 
   <!-- About Section -->
   <section id="about">
     <div class="container">
       <div class="row">
+         
+
         <div class="about-col-1">
-          <img src="images/user.png" alt="Ved's Profile Picture">
-        </div>
+  <div class="image-border">
+    <img src="images/myImage.jpeg" alt="Ved's Profile Picture">
+  </div>
+</div>
+
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
-          <p>A passionate developer with hands-on experience in web, app development, and UI/UX design. Currently pursuing BCA and actively honing skills in PHP, Laravel, and modern frontend technologies.</p>
+          <p>A passionate full stack web developer with hands-on experience in both frontend and backend development. Proficient in PHP, Laravel, and modern frontend technologies. Recently completed BCA and continuously enhancing skills in web technologies, UI/UX, and scalable application development.</p>
+
 
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -56,29 +62,34 @@
 
           <div class="tab-contents active-tab" id="skills">
             <ul>
-              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-              <li><span>Web Development</span><br>Building dynamic Web Applications</li>
-              <li><span>App Development</span><br>Android App development</li>
+              <li><span>Responsive Design</span><br>Creating mobile-friendly, cross-browser compatible websites</li>
+              <li><span>Frontend Development</span><br>HTML5, CSS3, JavaScript, Bootstrap</li>
+              <li><span>Backend Development</span><br>Building dynamic Web Applications</li>
+              <li><span>Version Control</span><br>Git, GitHub</li>
             </ul>
           </div>
 
           <div class="tab-contents" id="experience">
             <ul>
-              <li><span>UI/UX Design</span><br>Created user-friendly interfaces for websites and mobile apps through academic and personal projects.</li>
-              <li><span>Web Development</span><br>Developed responsive and scalable web apps using HTML, CSS, JavaScript, PHP, and Laravel.</li>
-              <li><span>App Development</span><br>Built Android applications using Java and participated in collaborative projects.</li>
-              <li><span>Version Control</span><br>Efficiently managed code using Git & GitHub.</li>
-              <li><span>Team Collaboration</span><br>Worked in college project teams and coding events.</li>
-            </ul>
+  <li><span>Web Development Intern</span><br>Worked on developing dynamic and secure web applications using PHP, Laravel, HTML, CSS, JavaScript, and MySQL. Focused on building clean, scalable, and responsive interfaces.</li>
+
+  <li><span>Personal & Academic Projects</span><br>Successfully completed multiple web-based projects, including eCommerce systems, portfolio websites, and admin dashboards, integrating backend APIs and database management.</li>
+
+  <li><span>Version Control & Collaboration</span><br>Actively used Git and GitHub for version control, code management, and collaborating on projects with fellow students and developers.</li>
+
+  <li><span>UI Customization</span><br>Designed and implemented customized frontend layouts with interactive animations, modern UI components, and responsive designs using CSS3 and modern JavaScript libraries.</li>
+</ul>
+
           </div>
 
           <div class="tab-contents" id="education">
-            <ul>
-              <li><span>BCA (2022-2025)</span><br>XYZ University / College, City</li>
-              <li><span>Core Subjects</span><br>Web Development, Data Structures, DBMS, Software Engineering</li>
-              <li><span>Projects</span><br>Built multiple projects using PHP, Laravel, HTML, CSS, JS, SQL</li>
-              <li><span>Activities</span><br>Participated in coding contests and technical events</li>
-            </ul>
+           <ul>
+       <li><span>Bachelor of Computer Applications (2022-2025)</span><br>Kurukshetra University, Yamunanagar, Haryana</li>
+       <li><span>Key Subjects</span><br>Web Development, Data Structures, Database Management Systems (DBMS), Software Engineering</li>
+       <li><span>Projects</span><br>Developed dynamic and responsive web applications using PHP, Laravel, HTML5, CSS3, JavaScript, and MySQL.</li>
+       <li><span>Additional Skills</span><br>Version Control (Git & GitHub), Responsive Design, UI/UX Principles</li>
+      </ul>
+
           </div>
 
         </div>
@@ -87,31 +98,69 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2 class="sub-title">My Services</h2>
-      <div class="services-list">
-        <div>
-          <i class="fas fa-code"></i>
-          <h3>UI/UX Design</h3>
-          <p>Creating clean and user-friendly interfaces for web and mobile apps.</p>
-          <a href="#">Learn More</a>
-        </div>
-        <div>
-          <i class="fas fa-crop-alt"></i>
-          <h3>Web Design</h3>
-          <p>Developing visually appealing, responsive, and dynamic websites.</p>
-          <a href="#">Learn More</a>
-        </div>
-        <div>
-          <i class="fas fa-app-store"></i>
-          <h3>App Design</h3>
-          <p>Designing intuitive mobile app experiences with seamless navigation.</p>
-          <a href="#">Learn More</a>
-        </div>
+  <!-- Services Section -->
+<section id="services">
+  <div class="container">
+    <h2 class="sub-title">My Projects</h2>
+    <div class="services-list">
+
+      <!-- Project 1: Café's Fusion -->
+      <div>
+        <i class="fas fa-coffee"></i>
+        <h3>Café's Fusion</h3>
+        <p>Food & coffee ordering web app with table booking and secure payment integration.</p>
+        <p>
+          <strong>Technologies:</strong> 
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Bootstrap</span>
+          <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">Stripe</span>
+          <span class="tech-badge">PHPMailer</span>
+        </p>
+        <a href="#">Learn More</a>
       </div>
+
+      <!-- Project 2: Hotel Management System -->
+      <div>
+        <i class="fas fa-hotel"></i>
+        <h3>Hotel Management System</h3>
+        <p>Room booking system with admin control, user roles, and payment & email integration.</p>
+        <p>
+          <strong>Technologies:</strong> 
+          <span class="tech-badge">Laravel</span>
+          <span class="tech-badge">PHP</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">MySQL</span>
+          <span class="tech-badge">Stripe</span>
+          <span class="tech-badge">PHPMailer</span>
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <!-- Project 3: Personal Portfolio -->
+      <div>
+        <i class="fas fa-user-astronaut"></i>
+        <h3>Personal Portfolio</h3>
+        <p>A modern portfolio website showcasing my skills and projects with smooth animations.</p>
+        <p>
+          <strong>Technologies:</strong> 
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Bootstrap</span>
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Portfolio Section -->
   <section id="portfolio">
@@ -148,18 +197,22 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section  id="contact">
     <div class="container">
       <div class="row">
-        <div class="contact-left">
+        <div  style="color: azure;" class="contact-left">
           <h2 class="sub-title">Contact Me</h2>
-          <p><i class="fas fa-paper-plane"></i> contact@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 1234567890</p>
+          <p><i class="fas fa-paper-plane"></i> vec69080@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91-9728148718</p>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter-square"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ved-prakash-tech"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/its__Ved07"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/_its_ved07/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ved-prakash-tech/"><i class="fab fa-linkedin"></i></a>
+
+            <a href="images/Vedprakash.pdf">  <i class="fas fa-file-alt"></i> </a>
+
+
           </div>
           <a href="images/Vedprakash.pdf" download class="btn btn2">Download CV</a>
         </div>
@@ -176,9 +229,19 @@
       </div>
     </div>
 
-    <footer class="copyright">
-      <center>&copy; 2025 Vedprakash. All rights reserved.</center>
-    </footer>
+    <div>
+      <button id="scrollToTopBtn" title="Go to top">
+  &#8679; <!-- Upward arrow symbol -->
+</button>
+    </div>
+
+    <!-- HTML -->
+<footer class="running-footer">
+  <div class="scrolling-text">
+    © 2025 Vedprakash | Web Developer | PHP, Laravel, JavaScript | All rights reserved.
+  </div>
+</footer>
+
   </section>
 
   <script src="script.js"></script>

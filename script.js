@@ -1,49 +1,53 @@
+// Tabs functionality
 var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-      for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-      }
-      for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
+var tabcontents = document.getElementsByClassName("tab-contents");
 
+function opentab(tabname, event) {
+  for (let tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (let tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+// Side menu open/close
 var sideMenu = document.getElementById("sideMenu");
-function openMenu(){
+
+function openMenu() {
   sideMenu.style.right = '0';
 }
-function closeMenu(){
+
+function closeMenu() {
   sideMenu.style.right = '-200px';
 }
 
+// Google Sheets form submission
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzeBW0KcgYF_1EgiABSRM83stjE4NalFAfuADzhVceJ1SYKAynFQwUjACT3Dyy-VI9EoA/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML = "Message Sent Successfully!";
-          setTimeout(() => msg.innerHTML = "", 5000);
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
-    });
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      msg.innerHTML = "Message Sent Successfully!";
+      setTimeout(() => msg.innerHTML = "", 5000);
+      form.reset();
+    })
+    .catch(error => console.error('Error!', error.message));
+});
 
-// cursor
-
-    const cursor = document.querySelector('.ball-cursor');
+// Custom cursor
+const cursor = document.querySelector('.ball-cursor');
 document.addEventListener('mousemove', e => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
 });
 
-
-
+// Typing effect
 const typedTextSpan = document.querySelector(".typing");
 const textArray = ["Backend Developer", "PHP & Laravel Specialist", "Web Application Developer", "Problem Solver", "Tech Enthusiast"];
 const typingDelay = 100;
@@ -74,6 +78,14 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+// Scroll smoothly to top when button clicked
+const scrollBtn = document.getElementById('scrollToTopBtn');
+if (scrollBtn) {
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
